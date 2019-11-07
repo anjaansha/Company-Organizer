@@ -1,0 +1,58 @@
+.daily_task_container{
+    width: 85vw;
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    position:relative;
+    .completed_task{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 20px 40px;
+    }
+}
+.title{
+    cursor:pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    border-bottom: 1px solid #c6c6c6;
+    margin-bottom: 20px;
+}
+.task_creator{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 0;
+    input{
+        width: 80%;
+    }
+}
+.task{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px 0;
+    button{
+        background: transparent;
+        border: none;
+        padding: 0 10px;
+        
+    }
+    label{
+        background: transparent;
+        border: none;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,7 @@
+<div class="title">Daily Tasks</div>
+<div class="daily_task_container">
+    <div class="completed_task">Completed Task : {{completedTask}}</div>
+    <div class = "task_creator"><input type="text" [(ngModel)]="task"><button (click) = "add()">ADD</button></div>
+    <div class="task" *ngFor = "let tasks of taskArray; let i=index"><button (click) = "remove(i)">&times;</button><label for="">{{tasks}} {{i}}</label><button (click) = "done(i)">&#10004;</button></div>
+    <div class="submission"><button (click) = "sendData()">Submit</button></div>
+</div>

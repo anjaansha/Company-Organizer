@@ -20,6 +20,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { DailyTaskComponent } from './daily-task/daily-task.component';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { SignupComponent } from './signup/signup.component';
     HeaderComponent,
     LoginComponent,
     SignupComponent,
+    DailyTaskComponent,
+    TimerComponent,
     
     
     

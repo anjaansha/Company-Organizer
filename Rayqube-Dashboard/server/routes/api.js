@@ -6,6 +6,7 @@ const work = require("../../src/app/models/work-model");
 const contactus = require("../../src/app/models/contact-us");
 const signUp = require("../../src/app/models/signup-model");
 const dailyTask = require("../../src/app/models/daily-task");
+const remainingTask = require("../../src/app/models/remaining-task");
 var multer = require('multer');
 var passwordHash = require('password-hash');
 
@@ -399,3 +400,46 @@ router.delete('/work/:id', function(req,res){
     });
 });
 
+
+
+
+router.post('/dailyworkdetails', function(req, res){
+    var dailytask = new dailyTask();
+    dailytask.email = req.body.email;
+    dailytask.workdetails = req.body.workdetails;
+    dailytask.date = req.body.date;
+    dailytask.save(function(err, dailyWork){
+        if(err){
+            console.log("error saving blog");
+        }else{
+            res.json(dailyWork);
+            res.status(200);
+        }
+    })
+});
+
+router.post('/remainingtasks', function(req, res){
+    var remainingtask = new remainingTask();
+    remainingtask.remaining = req.body.remaining;
+    remainingtask.save(function(err,rTask){
+        if(err){
+            console.log("error saving data");
+        }else{
+            res.json(rTask);
+            res.status(200);
+        }
+    })
+});
+
+router.get('/remainingtasks', function(req, res){
+    // res.send("allblogs");
+    console.log("get request");
+    remainingTask.find({})
+        .exec(function(err, task){
+            if(err){
+                console.log('error work');
+            }else{
+                res.json(task);
+            }
+    });
+});

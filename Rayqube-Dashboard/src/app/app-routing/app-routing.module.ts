@@ -13,6 +13,8 @@ import { CreateMemberComponent } from '../create-member/create-member.component'
 import { EditMemberComponent } from '../edit-member/edit-member.component';
 import { SignupComponent } from '../signup/signup.component';
 import { LoginComponent } from '../login/login.component';
+import { DailyTaskComponent } from '../daily-task/daily-task.component';
+
 
 
 
@@ -30,6 +32,7 @@ const routes: Routes = [
   { path: 'edit-member', component: EditMemberComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'daily-task', component: DailyTaskComponent },
 ]
 @NgModule({
   declarations: [],

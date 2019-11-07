@@ -13,6 +13,7 @@ export class SharedService {
   baseUrl = "http://localhost:1338/api/";
   fileUrl = "http://localhost:1338/file/";
   imageUrl = "http://localhost:1338/uploads/";
+  timerStatus = false;
   constructor(private http: HttpClient, private router: Router) { 
     
   }

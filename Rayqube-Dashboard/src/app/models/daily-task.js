@@ -1,19 +1,18 @@
 const mongoose = require('mongoose');
 
-var blogSchema = new mongoose.Schema({
-    title: {
-        type: String,
+var dailyWorkSchema = new mongoose.Schema({
+    workdetails: {
+        type: Array,
         required: 'This field is required.'
     },
     date: {
-        type: String
+        type: String,
+        required: 'This field is required.'
     },
-    blogContent: {
-        type: String
-    },
-    imagename: {
-        type: String
+    email: {
+        type: String,
+        required: 'This field is required.'
     },
 });
 
-module.exports = mongoose.model('daily-task', blogSchema, 'dailytask');
+module.exports = mongoose.model('dailytask', dailyWorkSchema, 'dailytask');
